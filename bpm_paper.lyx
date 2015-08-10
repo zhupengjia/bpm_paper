@@ -611,32 +611,9 @@ reference "fig:bpm-design-diagram"
 
 \end_inset
 
- and Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:BPM_daq"
-
-\end_inset
-
  are part of the beam pipe.
- The four antennas, 
-\begin_inset Formula $x_{+}$
-\end_inset
-
-, 
-\begin_inset Formula $x_{-}$
-\end_inset
-
-, 
-\begin_inset Formula $y_{+}$
-\end_inset
-
-, 
-\begin_inset Formula $y_{-}$
-\end_inset
-
- are attached to feedthroughs on the interior wall of the pipe at 
+ The four antennas are attached to feedthroughs on the interior wall of
+ the pipe at 
 \begin_inset Formula $90^{\circ}$
 \end_inset
 
@@ -650,10 +627,70 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename bpmdiag.jpg
-	lyxscale 10
+	lyxscale 40
 	width 40line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BPM design diagram, from JLab instrumentation group
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\qquad$
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename bpm.jpg
+	lyxscale 30
+	width 40line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BPM chamber which contains 4 antennas
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -670,7 +707,7 @@ name "fig:bpm-design-diagram"
 
 \end_inset
 
-BPM chamber design diagram from JLab instrumentation group
+BPM chamber
 \end_layout
 
 \end_inset
@@ -680,61 +717,39 @@ BPM chamber design diagram from JLab instrumentation group
 
 \end_inset
 
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename bpm_daq.jpg
-	lyxscale 20
-	width 70col%
-
+ The BPM chambers are inclined 
+\begin_inset Formula $45^{\circ}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:BPM_daq"
-
+ with the global Hall coordinate.
+ In order not to confuse with the direction in the Hall coordinate, two
+ antennas are marked as 
+\begin_inset Formula $u_{+}$
 \end_inset
 
-BPM chamber, receiver and related DAQ system for g2p experiment
-\end_layout
-
+ and 
+\begin_inset Formula $u_{-}$
 \end_inset
 
-
-\end_layout
-
+, which are used to determine the beam position in 
+\begin_inset Formula $u$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-When the beam passes through the BPM chamber, each antenna receives an induced
- signal.
- As shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:BPM_daq"
-
+ direction.
+ Another two are marked as 
+\begin_inset Formula $v_{+}$
 \end_inset
 
-, the BPM receiver collects and sends the signal to the regular Hall A DAQ
- system and another DAQ system designed for parity violation experiments,
- the HAPPEX system 
+ and 
+\begin_inset Formula $v_{-}$
+\end_inset
+
+.
+ When the beam passes through the BPM chamber, each antenna receives an
+ induced signal.
+ The BPM front-end receiver collects and sends the signal to the regular
+ Hall A DAQ system and another DAQ system designed for parity violation
+ experiments, the HAPPEX system 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ADC18bob"
@@ -800,21 +815,12 @@ s delay time, which was the inverse of the bandwidth setting chosen for
 
 s delay as a result of finite processing times.
  The BPM can not provide event by event position because of this time delay,
- due to the high frequency fast raster system (discussed in chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Raster-system"
-
-\end_inset
-
-).
+ due to the 25 kHz fast raster system.
 \end_layout
 
 \begin_layout Standard
-The existed chicane dipole magnets ordained two BPMs must be installed after
- them.
- Because of the space limitation between the second chicane magnet and the
- target, the two BPMs were placed very close to each other.
+Because of the space limitation between the second chicane magnet and the
+ target, the two BPMs were placed close to each other.
  One was placed 95.5 cm upstream of the target while the other was placed
  69 cm upstream, making the distance between them only 26.5 cm.
  The short distance magnified the position uncertainty from the BPMs to
@@ -1190,6 +1196,51 @@ agilent 33522A function generator, http://www.home.agilent.com/en/pd-1871286-pn-
 
  was used to generate two independent waveforms to drive the magnet coils
  of the slow raster.
+ The waveforms for the 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ directions are:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+x & = & A_{x}t{}^{1/2}sin(\omega t),\nonumber \\
+y & = & A_{y}(t+t_{0})^{1/2}sin(\omega t+\mbox{\phi}),\label{eq:slraster_func}
+\end{eqnarray}
+
+\end_inset
+
+where the 
+\begin_inset Formula $A_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{y}$
+\end_inset
+
+ are the maximum amplitude, 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi$
+\end_inset
+
+ are the AM and sin phase difference between 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ waveform, respectively.
  
 \begin_inset Float figure
 placement tbph
@@ -1220,11 +1271,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Current waveform for the slow raster, 
-\begin_inset Formula $t^{\frac{1}{2}}sin(\omega t)$
-\end_inset
-
-
+Current waveform for the slow raster
 \end_layout
 
 \end_inset
@@ -1289,43 +1336,6 @@ Slow raster pattern
 
 \end_inset
 
- The waveforms for the 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
- directions are:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-x & = & A_{x}(t+amphase_{x})^{1/2}sin(\omega_{x}t+phase_{x}),\nonumber \\
-y & = & A_{y}(t+amphase_{y})^{1/2}sin(\omega_{y}t+phase_{y}),\label{eq:slraster_func}
-\end{eqnarray}
-
-\end_inset
-
-where the 
-\begin_inset Formula $A_{x}$
-\end_inset
-
- and 
-\begin_inset Formula $A_{y}$
-\end_inset
-
- are the maximum amplitude, the unit of 
-\begin_inset Formula $amphase_{x,y}$
-\end_inset
-
- is the same as 
-\begin_inset Formula $t$
-\end_inset
-
-.
  Both of them are sine functions modulated by a function 
 \begin_inset Formula $t^{1/2}$
 \end_inset
@@ -1354,7 +1364,7 @@ reference "fig:Slow-raster"
 \end_inset
 
  waveforms kept same: 
-\begin_inset Formula $\omega_{x}=\omega_{y}=99.412$
+\begin_inset Formula $\omega=99.412$
 \end_inset
 
  Hz.
@@ -1365,7 +1375,7 @@ reference "fig:Slow-raster"
 \end_inset
 
 , and the second term is 
-\begin_inset Formula $period/2-t^{1/2}$
+\begin_inset Formula $period-t^{1/2}$
 \end_inset
 
 , and so on for the third and fourth terms.
@@ -1382,7 +1392,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1406,7 +1416,11 @@ name "fig:AM-phase-=0022600"
 
 \end_inset
 
-AM phase 
+Raster pattern with 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -1459,11 +1473,26 @@ name "fig:simulated-raster-shape"
 
 \end_inset
 
-simulated raster pattern,with phase=
-\begin_inset Formula $25^{\circ}$
+Simulated raster pattern, with 
+\begin_inset Formula $t_{0}$
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ensuremath{
+\backslash
+neq}
+\end_layout
+
+\end_inset
+
+0
 \end_layout
 
 \end_inset
@@ -1501,7 +1530,11 @@ name "fig:AM-phase=00003D0"
 
 \end_inset
 
-AM phase=0
+Manually adjust 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ to 0
 \end_layout
 
 \end_inset
@@ -1524,7 +1557,13 @@ name "fig:Slow-raster-uniformity"
 
 \end_inset
 
-Slow raster uniformity, (a) and (c) are from the data, (b) is simulated.
+None-zero 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ caused slow raster non-uniformity, (a) and (c) are from the data, (b) is
+ simulated.
+ 
 \end_layout
 
 \end_inset
@@ -1538,26 +1577,36 @@ Slow raster uniformity, (a) and (c) are from the data, (b) is simulated.
 \end_layout
 
 \begin_layout Standard
-Both sine and AM functions have a phase difference between the 
-\begin_inset Formula $x$
+The 
+\begin_inset Formula $\phi$
 \end_inset
 
- and 
-\begin_inset Formula $y$
+ was locked to 
+\begin_inset Formula $\frac{\pi}{2}$
 \end_inset
 
- waveform.
- The former could be locked by the function generator, the latter could
- not be locked and caused a non-uniformity pattern, as shown in Fig.
+ by the function generator, while the 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ was manually adjusted to 0.
+ Non-zero 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ could cause a non-uniformity pattern, as shown in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Slow-raster-uniformity"
 
 \end_inset
 
-(a).
- A simulation was done to reproduce the non-uniformity by setting the phase
- difference to non-zero, as shown in Fig.
+(a), which would cause non-uniformity beam distribution.
+ A simulation was reproduced the non-uniformity by setting the 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ to non-zero, as shown in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Slow-raster-uniformity"
@@ -1565,8 +1614,12 @@ reference "fig:Slow-raster-uniformity"
 \end_inset
 
 (b).
- The phase difference in the AM function was carefully adjusted and minimized
- before production data taking to avoid the non-uniformity.
+ The 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ was carefully adjusted and minimized before production data taking to avoid
+ the non-uniformity.
  The pattern of the spread beam was relatively uniform after this adjustment
  during the experiment, as shown in Fig.
 \begin_inset CommandInset ref
@@ -1583,141 +1636,6 @@ Data analysis
 \end_layout
 
 \begin_layout Subsection
-Coordinate system
-\end_layout
-
-\begin_layout Standard
-The relationship of coordinate systems used in this paper is shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Coordinate-systems"
-
-\end_inset
-
-.
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename bpm_coordinate.jpg
-	lyxscale 20
-	width 95col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Coordinate-systems"
-
-\end_inset
-
-Coordinate systems used in this paper
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The Hall coordinate is the global coordinate system in the hall, with the
- origin of the 
-\begin_inset Formula $NH_{3}$
-\end_inset
-
- target.
- The positions in the hall coordinate are identified as capital 
-\begin_inset Formula $X$
-\end_inset
-
- and 
-\begin_inset Formula $Y$
-\end_inset
-
- .
-\end_layout
-
-\begin_layout Standard
-The origin of each local coordinate system is the surveyed location for
- each device.
- The angular components of survey data decide the orientation of each local
- coordinate system.
- The positions in each local coordinate system are identified as lowercase
- 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
-.
- If multi-coordinates are related in the equation, a superscript is used
- to indicate the local coordinate system: 
-\begin_inset Formula $x^{bpm/harp}$
-\end_inset
-
- and 
-\begin_inset Formula $y^{bpm/harp}$
-\end_inset
-
-.
- The rotation between the BPMA local coordinate and the Hall coordinate
- is about 
-\begin_inset Formula $45^{\circ}$
-\end_inset
-
-, while it is about 
-\begin_inset Formula $57^{\circ}$
-\end_inset
-
- between the BPMB local coordinate and the Hall coordinate.
-\end_layout
-
-\begin_layout Standard
-The harp scan data analysis was taken in the harp local coordinate.
- The calculated positions from two harps were transferred to the BPM local
- coordinate in order to calibrate the BPMs.
-\end_layout
-
-\begin_layout Standard
-The BPM calibration was taken in the BPM local coordinate.
- In the straight through setting without the target magnet field, the positions
- calculated from the BPMs were transferred to the Hall coordinate in order
- to transport to the target location.
- For the settings with a transverse magnetic field, the input terms of the
- transport functions are the positions in the BPM rotated coordinate, which
- has the same origin with the BPM local coordinate but with the same directions
- with the Hall coordinate.
- The positions in the BPM rotated coordinate are identified as 
-\begin_inset Formula $x^{rot}$
-\end_inset
-
- and 
-\begin_inset Formula $y^{rot}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
 Harp scans for measuring absolute beam position
 \end_layout
 
@@ -1730,7 +1648,6 @@ reference "fig:1H05A-harp-scan"
 \end_inset
 
 .
- 
 \begin_inset Float figure
 placement tbph
 wide false
@@ -1817,7 +1734,7 @@ Signal vs position for harp,
 \end_inset
 
  axis is the strength of signal.
- The unit of signal is the arbitrary ADC unit.
+ The unit of signal strength is the ADC unit.
 \end_layout
 
 \end_inset
@@ -1850,11 +1767,7 @@ name "fig:1H05A-harp-scan"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-There are three groups of recorded data for each harp scan, which are 
+ There are three groups of recorded data for each harp scan, which are 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1959,8 +1872,9 @@ BPM data analysis and calibration
 \end_layout
 
 \begin_layout Standard
-The traditional diff/sum method to calculate the beam position has the non-linea
-rity effect in the position far away from the center of the beam pipe 
+The traditional difference-over-sum (diff/sum) method to calculate the beam
+ position has the non-linearity effect in the position far away from the
+ center of the beam pipe 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Barry301"
@@ -1970,15 +1884,23 @@ key "Barry301"
 .
  It is necessary to correct the equation of diff/sum since we have a slow
  raster.
- From the method of image 
+ The signal from each antenna excited by the beam can be calculated via
+ image charge method (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:mirror_method"
+
+\end_inset
+
+) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "carmanbpm,piotbpm"
 
 \end_inset
 
-, the signal from each antenna excited by the beam can be calculated by:
- 
+ : 
 \end_layout
 
 \begin_layout Standard
@@ -1998,19 +1920,19 @@ where
 \end_inset
 
  is 
-\begin_inset Formula $x_{+}$
+\begin_inset Formula $u_{+}$
 \end_inset
 
 , 
-\begin_inset Formula $x_{-}$
+\begin_inset Formula $u_{-}$
 \end_inset
 
 , 
-\begin_inset Formula $y_{+}$
+\begin_inset Formula $v_{+}$
 \end_inset
 
  and 
-\begin_inset Formula $y_{-}$
+\begin_inset Formula $v_{-}$
 \end_inset
 
 , respectively, 
@@ -2135,41 +2057,7 @@ Signal for each antenna of BPM
 \end_layout
 
 \begin_layout Standard
-The four antennas in the BPM chamber are used to determine the beam positions
- 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
- in the BPM; 
-\begin_inset Formula $x_{+}$
-\end_inset
-
- and 
-\begin_inset Formula $x_{-}$
-\end_inset
-
- for the 
-\begin_inset Formula $x$
-\end_inset
-
- position, and 
-\begin_inset Formula $y_{+}$
-\end_inset
-
- and 
-\begin_inset Formula $y_{-}$
-\end_inset
-
- for the 
-\begin_inset Formula $y$
-\end_inset
-
- position.
- In order to extract the beam position information, and eliminate the dependence
+In order to extract the beam position information, and eliminate the dependence
  on the beam current in equation (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2177,19 +2065,32 @@ reference "eq:antenna_signal"
 
 \end_inset
 
-), the difference-over-sum method is used as follows:
-\end_layout
-
-\begin_layout Standard
+), the diff/sum method is used as follows:
 \begin_inset Formula 
 \begin{eqnarray}
-x_{d} & = & \frac{\phi_{x+}-\phi_{x-}}{\phi_{x+}+\phi_{x-}},\label{eq:diff/sum}\\
-y_{d} & = & \frac{\phi_{y+}-\phi_{y-}}{\phi_{y+}+\phi_{y-}}.\label{eq:diff/sumy}
+D_{U} & = & \frac{\phi_{U+}-\phi_{U-}}{\phi_{U+}+\phi_{U-}},\label{eq:diff/sum}
 \end{eqnarray}
 
 \end_inset
 
-Substituting equation (
+where 
+\bar under
+
+\begin_inset Formula $U$
+\end_inset
+
+
+\bar default
+ is 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+, respectively.
+ Substituting equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:antenna_signal"
@@ -2203,66 +2104,37 @@ reference "eq:diff/sum"
 
 \end_inset
 
-) and equation (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:diff/sumy"
-
-\end_inset
-
 ), they can be rewritten as follows:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-x_{d}=\frac{\phi_{x+}-\phi_{x-}}{\phi_{x+}+\phi_{x-}}=\frac{2}{R}\frac{\rho cos(\theta-\theta_{0})}{1+\frac{\rho^{2}}{R^{2}}}=\frac{2}{R}\frac{x}{1+\frac{x^{2}+y^{2}}{R^{2}}},\label{eq:xb=000026xy}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-y_{d}=\frac{2}{R}\frac{y}{1+\frac{x^{2}+y^{2}}{R^{2}}},\label{eq:yb=000026xy}
+D_{U}=\frac{\phi_{U+}-\phi_{U-}}{\phi_{U+}+\phi_{U-}}=\frac{2}{R}\frac{\rho cos(\theta-\theta_{0})}{1+\frac{\rho^{2}}{R^{2}}}=\frac{2}{R}\frac{U}{1+\frac{\rho^{2}}{R^{2}}},\label{eq:xb=xy}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\rho^{2}=x^{2}+y^{2}$
+\begin_inset Formula $\rho^{2}=u^{2}+v^{2}$
 \end_inset
 
 .
  When 
-\begin_inset Formula $x^{2}+y^{2}\ll R^{2}$
+\begin_inset Formula $u^{2}+v^{2}\ll R^{2}$
 \end_inset
 
 , equations (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:xb=000026xy"
-
-\end_inset
-
-) and (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:yb=000026xy"
+reference "eq:xb=xy"
 
 \end_inset
 
 ) can be simplified as:
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-x & = & \frac{R}{2}x_{d}=\frac{R}{2}\frac{\phi_{x+}-\phi_{x-}}{\phi_{x+}+\phi_{x-}},\nonumber \\
-y & = & \frac{R}{2}y_{d}=\frac{R}{2}\frac{\phi_{y+}-\phi_{y-}}{\phi_{y+}+\phi_{y-}}.\label{eq:litexyb=000026xy}
+U & \approx & \frac{R}{2}D_{U}=\frac{R}{2}\frac{\phi_{U+}-\phi_{U-}}{\phi_{U+}+\phi_{U-}}.\label{eq:litexyb=xy}
 \end{eqnarray}
 
 \end_inset
@@ -2270,7 +2142,7 @@ y & = & \frac{R}{2}y_{d}=\frac{R}{2}\frac{\phi_{y+}-\phi_{y-}}{\phi_{y+}+\phi_{y
 Equation (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:litexyb=000026xy"
+reference "eq:litexyb=xy"
 
 \end_inset
 
@@ -2279,39 +2151,32 @@ reference "eq:litexyb=000026xy"
  When the beam is far from the center, equation (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:litexyb=000026xy"
+reference "eq:litexyb=xy"
 
 \end_inset
 
 ) is no longer valid.
  For the g2p experiment, the beam was rastered to have a diameter of about
  2 cm at the target.
- Combining equation (
+ From equation (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:xb=000026xy"
-
-\end_inset
-
-) with (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:yb=000026xy"
+reference "eq:xb=xy"
 
 \end_inset
 
 ) the beam position can be calculated as:
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-x & = & Rx_{d}(\frac{1}{x_{d}^{2}+y_{d}^{2}}-\frac{1}{\sqrt{x_{d}^{2}+y_{d}^{2}}}\sqrt{\frac{1}{x_{d}^{2}+y_{d}^{2}}-1}),\nonumber \\
-y & = & Ry_{d}(\frac{1}{x_{d}^{2}+y_{d}^{2}}-\frac{1}{\sqrt{x_{d}^{2}+y_{d}^{2}}}\sqrt{\frac{1}{x_{d}^{2}+y_{d}^{2}}-1}).\label{eq:realxy}
+U & = & RD_{U}(\frac{1}{D_{u}^{2}+D_{v}^{2}}-\frac{1}{\sqrt{D_{u}^{2}+D_{v}^{2}}}\sqrt{\frac{1}{D_{u}^{2}+D_{v}^{2}}-1}).\label{eq:realxy}
 \end{eqnarray}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 To verify this corrected equation, a simulation was performed.
  First, a set of position data was generated (Fig.
 \begin_inset CommandInset ref
@@ -2320,7 +2185,57 @@ reference "fig:Simulated-real-position"
 
 \end_inset
 
-(a)), 
+(a)), and the designed radius for the BPM chamber was used for 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Using equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:antenna_signal"
+
+\end_inset
+
+) to get the signal for each antenna, and setting 
+\begin_inset Formula $\phi_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $I$
+\end_inset
+
+ to be equal to 1, equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:realxy"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:litexyb=xy"
+
+\end_inset
+
+) were used to calculate the beam position for comparison.
+ The results are shown in Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Simulated-real-position"
+
+\end_inset
+
+(b) and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Simulated-real-position"
+
+\end_inset
+
+(c), respectively.
+ 
 \begin_inset Float figure
 placement tbph
 wide false
@@ -2458,7 +2373,7 @@ name "fig:Simulated-real-position"
 Comparing the calculated results using equation (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:litexyb=000026xy"
+reference "eq:litexyb=xy"
 
 \end_inset
 
@@ -2473,7 +2388,7 @@ reference "eq:realxy"
  (a) Simulated position; (b) The calculated result with equation (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:litexyb=000026xy"
+reference "eq:litexyb=xy"
 
 \end_inset
 
@@ -2494,56 +2409,44 @@ reference "eq:realxy"
 
 \end_inset
 
-and the designed radius for the BPM chamber was used for 
-\begin_inset Formula $R$
-\end_inset
 
-.
- Using equation (
+\end_layout
+
+\begin_layout Standard
+The corrected equation is also tested by using the experiment data and the
+ benchmark test data.
+ Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:antenna_signal"
+reference "fig:BPM-non-linearity-correction"
 
 \end_inset
 
-) to get the signal for each antenna, and setting 
-\begin_inset Formula $\phi_{0}$
-\end_inset
-
- and 
-\begin_inset Formula $I$
-\end_inset
-
- to be equal to 1, equations (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:litexyb=000026xy"
-
-\end_inset
-
-) and (
+(a) shows the difference between the position calculated from the corrected
+ equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:realxy"
 
 \end_inset
 
-) were used to calculate the beam position.
- The results are shown in Fig.
+) and the one from the diff/sum equation (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Simulated-real-position"
+reference "eq:xb=xy"
 
 \end_inset
 
-(b) and 
+).
+ Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Simulated-real-position"
+reference "fig:BPM-non-linearity-correction"
 
 \end_inset
 
-(c), respectively.
+(b) shows the comparison with the real beam position from the benchmark
+ test data.
  In this way the method using equation (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2551,66 +2454,17 @@ reference "eq:realxy"
 
 \end_inset
 
-) can correct the non-linearity effect caused by equation (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:litexyb=000026xy"
-
-\end_inset
-
-).
- Assuming the slow raster spreads the beam uniformly by changing the slow
- raster magnet current, the slow raster magnet current can be used to check
- this non-linearity.
- The slow raster magnet current can be converted to the displaced position,
- more details about the conversion will be discussed in chapter 
+) can correct the non-linearity effect caused by the diff/sum method.
+ The handling of the BPM information which only used for the center beam
+ position (discussed in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Det-ebe-pos"
 
 \end_inset
 
-.
- Fig.
+) also reduced this non-linearity effect.
  
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Linearityraster"
-
-\end_inset
-
- shows the linearity of the corrected equation with the position converted
- from the slow raster, compared with position calculated from the diff/sum
- equation.
- In order to avoid the delay time caused by the BPM receiver, the waveform
- of the slow raster x-magnet was set to 20 Hz sinusoidal for this study.
- The slow raster y-magnet and the fast raster were kept off.
- Since the BPM has a 
-\begin_inset Formula $45^{\circ}$
-\end_inset
-
- rotation with the Hall coordinate, the beam was sweeping in the diagonal
- direction in the BPM local coordinate, which has the largest non-linearity
- effect from the Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Simulated-real-position"
-
-\end_inset
-
-(c).
- The result shows that the corrected equation has a better linearity than
- the diff/sum one.
- Better solution may use a corrected algorithm during the benchmark test
- of the hardware 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "p.TUPC172"
-
-\end_inset
-
-.
 \begin_inset Float figure
 wide false
 sideways false
@@ -2618,10 +2472,66 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename raster_linear.jpg
-	lyxscale 20
-	width 90line%
+	filename diffsumvscorrected.jpg
+	lyxscale 5
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data from experiment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename benchlinear.jpg
+	lyxscale 5
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data from benchmark test
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2634,45 +2544,73 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Linearityraster"
+name "fig:BPM-non-linearity-correction"
 
 \end_inset
 
-Linearity of the corrected equation compared with the diff/sum equation.
- The blue pentagon markers are calculated from the corrected equation, while
- the green star markers are calculated from the diff/sum equation.
- The x axis 
-\begin_inset Formula $x_{raster}$
-\end_inset
-
- is the position transferred from the raster magnet current.
- The y axis in the left side is the position calculated from the BPM in
- the rotated coordinate system.
- The y axis in the right side is the absolute difference between the position
- calculated from BPM and the position transferred from the raster magnet
- current.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
- The handling of the BPM information only used for the center beam position
- (discussed in chapter 
+BPM non-linearity correction.
+ (a) Relationship between the position calculated from diff/sum equation
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Det-ebe-pos"
+reference "eq:xb=xy"
 
 \end_inset
 
-) also reduced this non-linearity effect.
+) (y axis) and the one from corrected equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:realxy"
+
+\end_inset
+
+) (x axis).
+ Red solid line is a reference line came from linear fit for the center
+ points .
+ Data is collected from experiment.
+ (b) Comparison between the diff/sum equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:xb=xy"
+
+\end_inset
+
+) and the corrected equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:realxy"
+
+\end_inset
+
+) using the benchmark test data.
+ The x axis is the real beam position.
+ The red triangles are the positions calculated from corrected equation
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:realxy"
+
+\end_inset
+
+).
+ The blue circles are the positions calculated from diff/sum equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:xb=xy"
+
+\end_inset
+
+) .
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2685,7 +2623,7 @@ The final information recorded in the data-stream was designed to have a
  in equation (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:xb=000026xy"
+reference "eq:xb=xy"
 
 \end_inset
 
@@ -2728,7 +2666,7 @@ where
  Equation (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:litexyb=000026xy"
+reference "eq:litexyb=xy"
 
 \end_inset
 
@@ -2738,34 +2676,29 @@ reference "eq:litexyb=000026xy"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-x_{d} & = & \frac{(A_{x+}-A_{x+\_ped}+b_{x+})-h_{x}(A_{x-}-A_{x-\_ped}+b_{x-})}{(A_{x+}-A_{x+\_ped}+b_{x+})+h_{x}(A_{x-}-A_{x-\_ped}+b_{x-})},\label{eq:xbfAb}\\
-y_{d} & = & \frac{(A_{y+}-A_{y+\_ped}+b_{y+})-h_{y}(A_{y-}-A_{y-\_ped}+b_{y-})}{(A_{y+}-A_{y+\_ped}+b_{y+})+h_{y}(A_{y-}-A_{y-\_ped}+b_{y-})},\label{eq:ybfAb}
+D_{U} & = & \frac{(A_{U+}-A_{U+\_ped}+b_{U+})-h_{u}(A_{U-}-A_{U-\_ped}+b_{U-})}{(A_{U+}-A_{U+\_ped}+b_{U+})+h_{u}(A_{U-}-A_{U-\_ped}+b_{U-})},\label{eq:xbfab}
 \end{eqnarray}
 
 \end_inset
 
 where 
-\begin_inset Formula $h_{x}$
+\begin_inset Formula $h_{U}$
 \end_inset
 
  = 
-\begin_inset Formula $a_{x-}/a_{x+}$
+\begin_inset Formula $a_{U-}/a_{U+}$
 \end_inset
 
 , and is related to the ratio of the signals for the 
-\begin_inset Formula $x_{+}$
+\begin_inset Formula $U_{+}$
 \end_inset
 
  and 
-\begin_inset Formula $x_{-}$
+\begin_inset Formula $U_{-}$
 \end_inset
 
  antennas and the gain settings of the two channels.
- Similarly, 
-\begin_inset Formula $h_{y}=a_{y-}/a_{y+}$
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2868,43 +2801,7 @@ reference "fig:BPM-raw-signalVScurrent"
 \end_layout
 
 \begin_layout Standard
-Combining a group of the harp scan data with a group of the BPM data, the
- position determined from the harps was then used to calibrate the 
-\begin_inset Formula $x$
-\end_inset
-
- and 
-\begin_inset Formula $y$
-\end_inset
-
- position calculated in equation (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:realxy"
-
-\end_inset
-
-) using the following equations:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-x_{harp}^{bpm} & = & c_{0}+c_{1}x+c_{2}y,\nonumber \\
-y_{harp}^{bpm} & = & c_{0}'+c_{1}'x+c_{2}'y,\label{eq:harpvsxy}
-\end{eqnarray}
-
-\end_inset
-
-where 
-\begin_inset Formula $x_{harp}^{bpm}$
-\end_inset
-
-, 
-\begin_inset Formula $y_{harp}^{bpm}$
-\end_inset
-
- were projected from 
+By transporting the position 
 \begin_inset Formula $x_{harp}$
 \end_inset
 
@@ -2912,23 +2809,63 @@ where
 \begin_inset Formula $y_{harp}$
 \end_inset
 
- in equation 
+ in equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:harp"
 
 \end_inset
 
-, 
-\begin_inset Formula $c_{0},c_{1},c_{2}$
+) from two harps to the BPM local coordinate 
+\begin_inset Formula $u_{harp}$
 \end_inset
 
  and 
-\begin_inset Formula $c_{0}',c_{1}',c_{2}'$
+\begin_inset Formula $v_{harp}$
 \end_inset
 
- are the calibration constants, which from a fit to the bpm data with the
- harp scan data, as an example shown in Fig.
+, a fit between the BPM data 
+\begin_inset Formula $U$
+\end_inset
+
+ and the harp data 
+\begin_inset Formula $U_{harp}$
+\end_inset
+
+ determined three calibration constants 
+\begin_inset Formula $c_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U_{harp}=U_{c}=c_{0}+c_{1}u+c_{2}v,\label{eq:Uvu}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $U_{c}$
+\end_inset
+
+ is the calibrated BPM position.
+ It was converted to Hall coordinate 
+\begin_inset Formula $X_{c}$
+\end_inset
+
+ for further transporting to the target location.
+ An calibration example is shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2966,8 +2903,8 @@ name "fig:Harpscan"
 
 \end_inset
 
-Harp scan data combined with DAQ data, the asterisk is the harp scan data,
- while the dot is the DAQ data after applying the calibration constants.
+Harp scan data combined with BPM data, the asterisks are the positions from
+ harp, while the dots are from BPM.
  
 \end_layout
 
@@ -2986,26 +2923,16 @@ reference "fig:Harpscan"
 
 \end_inset
 
- represent the beam positions 
-\begin_inset Formula $x_{harp}^{bpm}$
+ represent 
+\begin_inset Formula $U_{harp}$
 \end_inset
 
- and 
-\begin_inset Formula $y_{harp}^{bpm}$
+, and the dots represent 
+\begin_inset Formula $U$
 \end_inset
 
- in the local coordinate of the BPM calculated with the harp scan data,
- and the dots at the center of the asterisks are the BPM data from the ADC
- after calibration.
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Harpscan"
-
-\end_inset
-
-(b) is the beam distribution recorded in the ADC of the BPM with the slow
- raster on after applying the calibration constants.
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3135,7 +3062,6 @@ reference "fig:2Hz-filter-added"
 \end_inset
 
  shows the signal dealt with a 2 Hz low pass filter.
- By sacrificing the high frequency signal, higher resolution was gotten.
  The bottom 3 plots in Fig.
  
 \begin_inset CommandInset ref
@@ -3145,8 +3071,7 @@ reference "fig:2Hz-filter-added"
 \end_inset
 
  (a,b) are the averaged signal for comparing with the filtered signal.
- The average procedure also sacrificed the high frequency part of the signal,
- which lead to the same result as the filter.
+ The average procedure lead to the same result as the filter.
  The filter also erases the beam displacement caused by the rasters, which
  is necessary to extract the position of the beam center.
 \end_layout
@@ -3255,13 +3180,40 @@ http://en.wikipedia.org/wiki/Runge–Kutta_methods
 
  with 0.02 mm step length was used to generate the trajectories from BPM
  A to the target by using the field map.
- The positions at BPM A, BPM B and the position and angle at the target
- were extracted from the simulated trajectory.
+ Data extracted from the simulation was used as input for the polynomial
+ fitting:
 \end_layout
 
 \begin_layout Standard
-Data extracted from the simulation was used as input to a fitting program
- that determined the best-fit polynomial.
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}x_{tgt}\\
+y_{tgt}\\
+\theta_{tgt}\\
+\phi_{tgt}
+\end{bmatrix}=F(\begin{bmatrix}x_{BPMA}\\
+y_{BPMA}\\
+x_{BPMB}\\
+y_{BPMB}
+\end{bmatrix}),
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $F$
+\end_inset
+
+ is the fitted polynomial transport function.
+ The positions at the BPMs: 
+\begin_inset Formula $x_{BPMA},\ y_{BPMA},\ x_{BPMB},\ y_{BPMB}$
+\end_inset
+
+, and the position and angle at the target: 
+\begin_inset Formula $x_{tgt},\ y_{tgt},\ \theta_{tgt},\ \phi_{tgt}$
+\end_inset
+
+, are extracted from the simulated trajectory.
  In total, 24 different fits were taken for 4 different target positions
  and 6 configurations with different target magnetic field and beam energy
  settings.
@@ -3278,10 +3230,6 @@ The transport functions were only used to transport the beam center position
  out the fast raster and slow raster motion to keep only the beam center
  position.
  The transported position were expressed as 
-\begin_inset Formula $X_{center}$
-\end_inset
-
- and 
 \begin_inset Formula $X_{center}$
 \end_inset
 
@@ -3312,8 +3260,7 @@ The readout of the magnet current for the two rasters was connected to a
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-X & = & X_{center}+X_{fstraster}+X_{slraster},\nonumber \\
-Y & = & Y_{center}+Y_{fstraster}+Y_{slraster},\label{eq:total_pos}
+X & = & X_{center}+X_{fstraster}+X_{slraster},\label{eq:tot_pos}
 \end{eqnarray}
 
 \end_inset
@@ -3322,16 +3269,8 @@ where
 \begin_inset Formula $X_{fstraster}$
 \end_inset
 
-, 
-\begin_inset Formula $Y_{fstraster}$
-\end_inset
-
  and 
 \begin_inset Formula $X_{slraster}$
-\end_inset
-
-, 
-\begin_inset Formula $Y_{slraster}$
 \end_inset
 
  were the position displaced by the fast raster and slow raster, respectively,
