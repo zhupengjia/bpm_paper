@@ -1884,8 +1884,9 @@ key "Barry301"
 .
  It is necessary to correct the equation of diff/sum since we have a slow
  raster.
- The signal from each antenna excited by the beam can be calculated via
- image charge method (Fig.
+ With the assumption of the infinitely long chamber and the negligible antenna
+ influence for the electric field inside the chamber, the signal from each
+ antenna excited by the beam can be calculated via image charge method (Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
