@@ -717,34 +717,36 @@ BPM chamber
 
 \end_inset
 
- The BPM chambers are inclined 
+ The BPM chambers are placed with a 
 \begin_inset Formula $45^{\circ}$
 \end_inset
 
- with the global Hall coordinate.
- In order not to confuse with the direction in the Hall coordinate, two
- antennas are marked as 
+ rotation (along z) with respect to the global Hall coordinate.
+ The two pairs of antennas are marked as 
 \begin_inset Formula $u_{+}$
 \end_inset
 
- and 
+, 
 \begin_inset Formula $u_{-}$
 \end_inset
 
-, which are used to determine the beam position in 
-\begin_inset Formula $u$
-\end_inset
-
- direction.
- Another two are marked as 
+ and 
 \begin_inset Formula $v_{+}$
 \end_inset
 
- and 
+, 
 \begin_inset Formula $v_{-}$
 \end_inset
 
-.
+, respectively, which are used to determine beam positions in 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ directions.
  When the beam passes through the BPM chamber, each antenna receives an
  induced signal.
  The BPM front-end receiver collects and sends the signal to the regular
@@ -1042,8 +1044,8 @@ In order to minimize the depolarization, avoid damage to the target material
 \begin_inset Formula $NH_{3}$
 \end_inset
 
- target was measured by a NMR coil which installed inside the target cell
- 
+ target was measured using a NMR coil which was placed inside the target
+ cell 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Pierce201454"
@@ -1589,7 +1591,7 @@ The
 \begin_inset Formula $t_{0}$
 \end_inset
 
- was manually adjusted to 0.
+ was manually fixed to 0.
  Non-zero 
 \begin_inset Formula $t_{0}$
 \end_inset
@@ -1733,8 +1735,8 @@ Signal vs position for harp,
 \begin_inset Formula $y$
 \end_inset
 
- axis is the strength of signal.
- The unit of signal strength is the ADC unit.
+ axis is the strength of signal, which is the ADC value.
+ 
 \end_layout
 
 \end_inset
@@ -1872,9 +1874,9 @@ BPM data analysis and calibration
 \end_layout
 
 \begin_layout Standard
-The traditional difference-over-sum (diff/sum) method to calculate the beam
- position has the non-linearity effect in the position far away from the
- center of the beam pipe 
+The traditional difference-over-sum (diff/sum) method of calculating the
+ beam position has the non-linearity effect at the position far away from
+ the center of the beam pipe 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Barry301"
@@ -1884,9 +1886,10 @@ key "Barry301"
 .
  It is necessary to correct the equation of diff/sum since we have a slow
  raster.
- With the assumption of the infinitely long chamber and the negligible antenna
- influence for the electric field inside the chamber, the signal from each
- antenna excited by the beam can be calculated via image charge method (Fig.
+ With the assumption of an infinitely long chamber and the neglecting the
+ antenna influence on the electric field inside the chamber, the signal
+ from each antenna excited by the beam can be calculated via image charge
+ method (Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1971,7 +1974,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2178,7 +2181,7 @@ U & = & RD_{U}(\frac{1}{D_{u}^{2}+D_{v}^{2}}-\frac{1}{\sqrt{D_{u}^{2}+D_{v}^{2}}
 \end_layout
 
 \begin_layout Standard
-To verify this corrected equation, a simulation was performed.
+To verify this correction equation, a simulation was performed.
  First, a set of position data was generated (Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2248,7 +2251,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2414,8 +2417,8 @@ reference "eq:realxy"
 \end_layout
 
 \begin_layout Standard
-The corrected equation is also tested by using the experiment data and the
- benchmark test data.
+The correction equation is also tested by using the experiment data and
+ the bench test data.
  Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2423,7 +2426,7 @@ reference "fig:BPM-non-linearity-correction"
 
 \end_inset
 
-(a) shows the difference between the position calculated from the corrected
+(a) shows the difference between the position calculated from the correction
  equation (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2446,8 +2449,8 @@ reference "fig:BPM-non-linearity-correction"
 
 \end_inset
 
-(b) shows the comparison with the real beam position from the benchmark
- test data.
+(b) shows the comparison with the real beam position from the bench test
+ data.
  In this way the method using equation (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2526,7 +2529,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Data from benchmark test
+Data from bench test
 \end_layout
 
 \end_inset
@@ -2558,7 +2561,7 @@ reference "eq:xb=xy"
 
 \end_inset
 
-) (y axis) and the one from corrected equation (
+) (y axis) and the one from correction equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:realxy"
@@ -2576,16 +2579,16 @@ reference "eq:xb=xy"
 
 \end_inset
 
-) and the corrected equation (
+) and the correction equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:realxy"
 
 \end_inset
 
-) using the benchmark test data.
+) using the bench test data.
  The x axis is the real beam position.
- The red triangles are the positions calculated from corrected equation
+ The red triangles are the positions calculated from correction equation
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2722,13 +2725,13 @@ reference "eq:antenna_signal"
 \end_inset
 
  was obtained by taking the linear fit between the ADC values of BPM and
- the beam current with a group of runs with the same beam position but different
- values of beam current: 
+ the beam current: 
 \begin_inset Formula $I\propto(A_{i}-A_{i\_ped}+b_{i})$
 \end_inset
 
 .
- 
+ Besides, the linear fit used a group of runs which had the same beam position
+ but different beam current 
 \begin_inset Float figure
 placement tbph
 wide false
@@ -2953,7 +2956,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2993,7 +2996,7 @@ Normal run with beam
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3093,17 +3096,39 @@ It is easy to transport the position from the BPMs to the target by using
  a linear transportation method for the straight through setting.
  For the settings with a transverse magnetic field at the target, the linear
  transportation method can not be used since the beam is bent near the target.
- A simulation package was constructed to simulate the behavior of the beam.
- Polynomial curve fittings were used for simulated data to generate the
- transport functions in order to transport the beam from the two BPMs to
- the target (Fig.
+ A target magnet field map 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "winestosca"
+
+\end_inset
+
+ was generated from the TOSCA model.
+ To test the accuracy of the TOSCA model, the target magnet field was measured
+ before the experiment 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jiefieldmap,chaofieldmap"
+
+\end_inset
+
+.
+ The position and angle at target were calculated in terms of the positions
+ at BPMA and BPMB, together with the magnet field information.
+ Fits were used to speed up the calculation.
+ To do this, a full simulation was taken by generating thousands of trajectories
+ with different initial positions and angles.
+ The fits were compared with the full simulation and they are consistent
+ with negligible difference.
+ Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Transporting-beam-position"
 
 \end_inset
 
-).
+ shows the trajectories from the simulation.
  
 \begin_inset Float figure
 placement tbph
@@ -3148,88 +3173,10 @@ Transporting beam position from BPM to target with transverse target magnet
 \end_layout
 
 \begin_layout Standard
-A target magnet field map 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "winestosca"
-
-\end_inset
-
- was generated from the TOSCA model.
- To test the accuracy of the TOSCA model, the target magnet field was measured
- before the experiment 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "jiefieldmap,chaofieldmap"
-
-\end_inset
-
-.
- The generated field map was used in the simulation.
- An event generator generated thousands of electrons with different initial
- positions and angles, with the energy of the electrons set to the same
- values as in the experiment.
- The Runge-Kutta method
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://en.wikipedia.org/wiki/Runge–Kutta_methods
-\end_layout
-
-\end_inset
-
- with 0.02 mm step length was used to generate the trajectories from BPM
- A to the target by using the field map.
- Data extracted from the simulation was used as input for the polynomial
- fitting:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\begin{bmatrix}x_{tgt}\\
-y_{tgt}\\
-\theta_{tgt}\\
-\phi_{tgt}
-\end{bmatrix}=F(\begin{bmatrix}x_{BPMA}\\
-y_{BPMA}\\
-x_{BPMB}\\
-y_{BPMB}
-\end{bmatrix}),
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $F$
-\end_inset
-
- is the fitted polynomial transport function.
- The positions at the BPMs: 
-\begin_inset Formula $x_{BPMA},\ y_{BPMA},\ x_{BPMB},\ y_{BPMB}$
-\end_inset
-
-, and the position and angle at the target: 
-\begin_inset Formula $x_{tgt},\ y_{tgt},\ \theta_{tgt},\ \phi_{tgt}$
-\end_inset
-
-, are extracted from the simulated trajectory.
- In total, 24 different fits were taken for 4 different target positions
- and 6 configurations with different target magnetic field and beam energy
- settings.
- The validity of the transport functions was explored in the simulation
- using a new set of random trajectories generated in the same manner as
- those used in the fitting.
- The deviation between the fitted transport function and the simulation
- was less than 0.1%.
-\end_layout
-
-\begin_layout Standard
-The transport functions were only used to transport the beam center position
- from the two BPMs to the target by applying the 2 Hz filter, which filtered
- out the fast raster and slow raster motion to keep only the beam center
- position.
+The fitted transport functions were only used to transport the beam center
+ position from the two BPMs to the target by applying the 2 Hz filter, which
+ filtered out the fast raster and slow raster motion to keep only the beam
+ center position.
  The transported position were expressed as 
 \begin_inset Formula $X_{center}$
 \end_inset
@@ -3361,7 +3308,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3861,13 +3808,13 @@ JLab g2p experiment used a transversely polarized
  Beam-line equipment, including the BPMs, harps and associated readout system,
  were upgraded to allow precision measurements of the beam position at low
  current (50-100 nA).
- A software filter was used to reduce noise in the BPMs.
- A corrected equation was used to compensate the non-linearity caused by
+ A software filter was used to reduce noise of the BPMs.
+ A correction equation was used to compensate the non-linearity caused by
  the diff/sum equation.
  The harp data and the linear fit between the bpm signal and the beam current
  were used to extract the calibration constant of the BPM.
  To account for the strong target magnetic field effect, transport functions
- were generated to transport the beam position from the BPMs to the target.
+ were fitted to transport the beam position from the BPMs to the target.
  The beam position in the x-y plane and the angle at the target location
  are extracted event-by-event by combining information from the BPMs and
  the signals from the rasters.

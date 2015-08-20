@@ -3,7 +3,6 @@
 \documentclass[english,review,number,sort&compress]{elsarticle}
 \usepackage[latin9]{inputenc}
 \usepackage{babel}
-\usepackage{amsmath}
 \usepackage{graphicx}
 \PassOptionsToPackage{normalem}{ulem}
 \usepackage{ulem}
@@ -195,24 +194,23 @@ of the pipe at $90^{\circ}$ intervals.
 
 \protect\caption{\label{fig:bpm-design-diagram}BPM chamber}
 \end{figure}
- The BPM chambers are inclined $45^{\circ}$ with the global Hall
-coordinate. In order not to confuse with the direction in the Hall
-coordinate, two antennas are marked as $u_{+}$ and $u_{-}$, which
-are used to determine the beam position in $u$ direction. Another
-two are marked as $v_{+}$ and $v_{-}$. When the beam passes through
-the BPM chamber, each antenna receives an induced signal. The BPM
-front-end receiver collects and sends the signal to the regular Hall
-A DAQ system and another DAQ system designed for parity violation
-experiments, the HAPPEX system \citep{ADC18bob}. The new BPM receiver
-was designed by the JLab instrumentation group \citep{mussonece652paper}
-in order to achieve the required precision at a level of 0.1 mm with
-a beam current as low as 50 nA. The regular DAQ system was connected
-to a 13-bit fastbus ADC (Lecroy ADC 1881) with an integration time
-of 50 ns, which was triggered by a scattered electron event. The HAPPEX
-system was connected to an 18-bit ADC with an integration time of
-875 $\mu$s, which was triggered by a beam helicity signal at 1 kHz.
-The amplitude, $A$, recorded in the ADC has the following relation
-with the BPM signal, $\phi$:
+ The BPM chambers are placed with a $45^{\circ}$ rotation (along
+z) with respect to the global Hall coordinate. The two pairs of antennas
+are marked as $u_{+}$, $u_{-}$ and $v_{+}$, $v_{-}$, respectively,
+which are used to determine beam positions in $u$ and $v$ directions.
+When the beam passes through the BPM chamber, each antenna receives
+an induced signal. The BPM front-end receiver collects and sends the
+signal to the regular Hall A DAQ system and another DAQ system designed
+for parity violation experiments, the HAPPEX system \citep{ADC18bob}.
+The new BPM receiver was designed by the JLab instrumentation group
+\citep{mussonece652paper} in order to achieve the required precision
+at a level of 0.1 mm with a beam current as low as 50 nA. The regular
+DAQ system was connected to a 13-bit fastbus ADC (Lecroy ADC 1881)
+with an integration time of 50 ns, which was triggered by a scattered
+electron event. The HAPPEX system was connected to an 18-bit ADC with
+an integration time of 875 $\mu$s, which was triggered by a beam
+helicity signal at 1 kHz. The amplitude, $A$, recorded in the ADC
+has the following relation with the BPM signal, $\phi$:
 
 \begin{equation}
 A\propto\phi\cdot10^{g/20},\label{eq:adcsignalvsantenna}
@@ -287,7 +285,7 @@ y_{harp} & = & \frac{1}{2}[(survey_{\backslash}-survey_{/})-(peak_{\backslash}-p
 In order to minimize the depolarization, avoid damage to the target
 material from radiation, and reduce systematic error for the polarization
 measurement by NMR (The polarization of the $NH_{3}$ target was measured
-by a NMR coil which installed inside the target cell \citep{Pierce201454}.
+using a NMR coil which was placed inside the target cell \citep{Pierce201454}.
 The non-uniformity of depolarization could reduce the precision of
 the NMR measurement due to the measurement being an average over the
 target), two raster systems were installed at $\sim$17 m upstream
@@ -373,7 +371,7 @@ raster non-uniformity, (a) and (c) are from the data, (b) is simulated. }
 
 
 The $\phi$ was locked to $\frac{\pi}{2}$ by the function generator,
-while the $t_{0}$ was manually adjusted to 0. Non-zero $t_{0}$ could
+while the $t_{0}$ was manually fixed to 0. Non-zero $t_{0}$ could
 cause a non-uniformity pattern, as shown in Fig.\ref{fig:Slow-raster-uniformity}(a),
 which would cause non-uniformity beam distribution. A simulation was
 reproduced the non-uniformity by setting the $t_{0}$ to non-zero,
@@ -397,8 +395,8 @@ for extending position record]{\protect\begin{centering}
 \par\end{centering}
 
 }$\qquad$\subfloat[\label{fig:position-vs-signal}Signal vs position for harp, $x$ axis
-is position, $y$ axis is the strength of signal. The unit of signal
-strength is the ADC unit.]{\protect\begin{centering}
+is position, $y$ axis is the strength of signal, which is the ADC
+value. ]{\protect\begin{centering}
 \protect\includegraphics[width=0.4\linewidth]{harp05_peak}\protect
 \par\end{centering}
 
@@ -447,14 +445,14 @@ and the scan was taken again if the beam position changed.
 
 \subsection{BPM data analysis and calibration}
 
-The traditional difference-over-sum (diff/sum) method to calculate
-the beam position has the non-linearity effect in the position far
+The traditional difference-over-sum (diff/sum) method of calculating
+the beam position has the non-linearity effect at the position far
 away from the center of the beam pipe \citep{Barry301}. It is necessary
 to correct the equation of diff/sum since we have a slow raster. With
-the assumption of the infinitely long chamber and the negligible antenna
-influence for the electric field inside the chamber, the signal from
-each antenna excited by the beam can be calculated via image charge
-method (Fig. \ref{fig:mirror_method}) \citep{carmanbpm,piotbpm}
+the assumption of an infinitely long chamber and the neglecting the
+antenna influence on the electric field inside the chamber, the signal
+from each antenna excited by the beam can be calculated via image
+charge method (Fig. \ref{fig:mirror_method}) \citep{carmanbpm,piotbpm}
 : 
 
 \begin{equation}
@@ -513,7 +511,7 @@ U & = & RD_{U}(\frac{1}{D_{u}^{2}+D_{v}^{2}}-\frac{1}{\sqrt{D_{u}^{2}+D_{v}^{2}}
 \end{eqnarray}
 
 
-To verify this corrected equation, a simulation was performed. First,
+To verify this correction equation, a simulation was performed. First,
 a set of position data was generated (Fig.\ref{fig:Simulated-real-position}(a)),
 and the designed radius for the BPM chamber was used for $R$. Using
 equation (\ref{eq:antenna_signal}) to get the signal for each antenna,
@@ -546,16 +544,16 @@ result with equation (\ref{eq:realxy}).}
 \end{figure}
 
 
-The corrected equation is also tested by using the experiment data
-and the benchmark test data. Fig.\ref{fig:BPM-non-linearity-correction}(a)
-shows the difference between the position calculated from the corrected
+The correction equation is also tested by using the experiment data
+and the bench test data. Fig.\ref{fig:BPM-non-linearity-correction}(a)
+shows the difference between the position calculated from the correction
 equation (\ref{eq:realxy}) and the one from the diff/sum equation
 (\ref{eq:xb=00003Dxy}). Fig.\ref{fig:BPM-non-linearity-correction}(b)
-shows the comparison with the real beam position from the benchmark
-test data. In this way the method using equation (\ref{eq:realxy})
-can correct the non-linearity effect caused by the diff/sum method.
-The handling of the BPM information which only used for the center
-beam position (discussed in chapter \ref{sub:Det-ebe-pos}) also reduced
+shows the comparison with the real beam position from the bench test
+data. In this way the method using equation (\ref{eq:realxy}) can
+correct the non-linearity effect caused by the diff/sum method. The
+handling of the BPM information which only used for the center beam
+position (discussed in chapter \ref{sub:Det-ebe-pos}) also reduced
 this non-linearity effect. 
 \begin{figure}
 \begin{centering}
@@ -563,7 +561,7 @@ this non-linearity effect.
 \protect\includegraphics[width=0.45\columnwidth]{diffsumvscorrected}\protect
 \par\end{centering}
 
-}\subfloat[Data from benchmark test]{\protect\begin{centering}
+}\subfloat[Data from bench test]{\protect\begin{centering}
 \protect\includegraphics[width=0.45\columnwidth]{benchlinear}\protect
 \par\end{centering}
 
@@ -572,13 +570,13 @@ this non-linearity effect.
 
 \protect\caption{\label{fig:BPM-non-linearity-correction}BPM non-linearity correction.
 (a) Relationship between the position calculated from diff/sum equation
-(\ref{eq:xb=00003Dxy}) (y axis) and the one from corrected equation
+(\ref{eq:xb=00003Dxy}) (y axis) and the one from correction equation
 (\ref{eq:realxy}) (x axis). Red solid line is a reference line came
 from linear fit for the center points . Data is collected from experiment.
 (b) Comparison between the diff/sum equation (\ref{eq:xb=00003Dxy})
-and the corrected equation (\ref{eq:realxy}) using the benchmark
-test data. The x axis is the real beam position. The red triangles
-are the positions calculated from corrected equation (\ref{eq:realxy}).
+and the correction equation (\ref{eq:realxy}) using the bench test
+data. The x axis is the real beam position. The red triangles are
+the positions calculated from correction equation (\ref{eq:realxy}).
 The blue circles are the positions calculated from diff/sum equation
 (\ref{eq:xb=00003Dxy}) .}
 \end{figure}
@@ -606,9 +604,9 @@ of the two channels.
 
 Combining the equation (\ref{eq:phivsA}) and (\ref{eq:antenna_signal}),
 the calibration constant $b_{i}$ was obtained by taking the linear
-fit between the ADC values of BPM and the beam current with a group
-of runs with the same beam position but different values of beam current:
-$I\propto(A_{i}-A_{i\_ped}+b_{i})$. 
+fit between the ADC values of BPM and the beam current: $I\propto(A_{i}-A_{i\_ped}+b_{i})$.
+Besides, the linear fit used a group of runs which had the same beam
+position but different beam current 
 \begin{figure}[tbph]
 \begin{centering}
 \includegraphics[width=0.5\linewidth]{currvspos} 
@@ -693,10 +691,17 @@ It is easy to transport the position from the BPMs to the target by
 using a linear transportation method for the straight through setting.
 For the settings with a transverse magnetic field at the target, the
 linear transportation method can not be used since the beam is bent
-near the target. A simulation package was constructed to simulate
-the behavior of the beam. Polynomial curve fittings were used for
-simulated data to generate the transport functions in order to transport
-the beam from the two BPMs to the target (Fig.\ref{fig:Transporting-beam-position}).
+near the target. A target magnet field map \citep{winestosca} was
+generated from the TOSCA model. To test the accuracy of the TOSCA
+model, the target magnet field was measured before the experiment
+\citep{jiefieldmap,chaofieldmap}. The position and angle at target
+were calculated in terms of the positions at BPMA and BPMB, together
+with the magnet field information. Fits were used to speed up the
+calculation. To do this, a full simulation was taken by generating
+thousands of trajectories with different initial positions and angles.
+The fits were compared with the full simulation and they are consistent
+with negligible difference. Fig. \ref{fig:Transporting-beam-position}
+shows the trajectories from the simulation. 
 \begin{figure}[tbph]
 \begin{centering}
 \includegraphics[width=0.4\linewidth]{rastersize_target1} 
@@ -707,44 +712,11 @@ from BPM to target with transverse target magnet field}
 \end{figure}
 
 
-A target magnet field map \citep{winestosca} was generated from the
-TOSCA model. To test the accuracy of the TOSCA model, the target magnet
-field was measured before the experiment \citep{jiefieldmap,chaofieldmap}.
-The generated field map was used in the simulation. An event generator
-generated thousands of electrons with different initial positions
-and angles, with the energy of the electrons set to the same values
-as in the experiment. The Runge-Kutta method\footnote{http://en.wikipedia.org/wiki/Runge\textendash Kutta\_methods}
-with 0.02 mm step length was used to generate the trajectories from
-BPM A to the target by using the field map. Data extracted from the
-simulation was used as input for the polynomial fitting:
-
-\begin{equation}
-\begin{bmatrix}x_{tgt}\\
-y_{tgt}\\
-\theta_{tgt}\\
-\phi_{tgt}
-\end{bmatrix}=F(\begin{bmatrix}x_{BPMA}\\
-y_{BPMA}\\
-x_{BPMB}\\
-y_{BPMB}
-\end{bmatrix}),
-\end{equation}
-where $F$ is the fitted polynomial transport function. The positions
-at the BPMs: $x_{BPMA},\ y_{BPMA},\ x_{BPMB},\ y_{BPMB}$, and the
-position and angle at the target: $x_{tgt},\ y_{tgt},\ \theta_{tgt},\ \phi_{tgt}$,
-are extracted from the simulated trajectory. In total, 24 different
-fits were taken for 4 different target positions and 6 configurations
-with different target magnetic field and beam energy settings. The
-validity of the transport functions was explored in the simulation
-using a new set of random trajectories generated in the same manner
-as those used in the fitting. The deviation between the fitted transport
-function and the simulation was less than 0.1\%.
-
-The transport functions were only used to transport the beam center
-position from the two BPMs to the target by applying the 2 Hz filter,
-which filtered out the fast raster and slow raster motion to keep
-only the beam center position. The transported position were expressed
-as $X_{center}$.
+The fitted transport functions were only used to transport the beam
+center position from the two BPMs to the target by applying the 2
+Hz filter, which filtered out the fast raster and slow raster motion
+to keep only the beam center position. The transported position were
+expressed as $X_{center}$.
 
 
 \subsection{\label{sub:Det-ebe-pos}Determining the beam position event-by-event}
@@ -922,12 +894,12 @@ a large area. Two chicane magnets were used to compensate the strong
 transverse magnetic field. Beam-line equipment, including the BPMs,
 harps and associated readout system, were upgraded to allow precision
 measurements of the beam position at low current (50-100 nA). A software
-filter was used to reduce noise in the BPMs. A corrected equation
+filter was used to reduce noise of the BPMs. A correction equation
 was used to compensate the non-linearity caused by the diff/sum equation.
 The harp data and the linear fit between the bpm signal and the beam
 current were used to extract the calibration constant of the BPM.
 To account for the strong target magnetic field effect, transport
-functions were generated to transport the beam position from the BPMs
+functions were fitted to transport the beam position from the BPMs
 to the target. The beam position in the x-y plane and the angle at
 the target location are extracted event-by-event by combining information
 from the BPMs and the signals from the rasters. The performance of
