@@ -1248,7 +1248,7 @@ where the
 placement tbph
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1262,7 +1262,7 @@ status open
 \begin_inset Graphics
 	filename slow_raster_shape2.jpg
 	lyxscale 10
-	width 70line%
+	width 70col%
 
 \end_inset
 
@@ -1294,7 +1294,7 @@ status open
 \begin_inset Graphics
 	filename slow_raster_shape.jpg
 	lyxscale 10
-	width 20line%
+	width 30col%
 
 \end_inset
 
@@ -1394,7 +1394,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1563,7 +1563,7 @@ None-zero
 \begin_inset Formula $t_{0}$
 \end_inset
 
- caused slow raster non-uniformity, (a) and (c) are from the data, (b) is
+ caused slow raster non-uniformity, (a) and (c) are from the ADC, (b) is
  simulated.
  
 \end_layout
@@ -1874,9 +1874,12 @@ BPM data analysis and calibration
 \end_layout
 
 \begin_layout Standard
-The traditional difference-over-sum (diff/sum) method of calculating the
- beam position has the non-linearity effect at the position far away from
- the center of the beam pipe 
+The traditional difference-over-sum (
+\begin_inset Formula $\Delta/\Sigma$
+\end_inset
+
+) method of calculating the beam position has the non-linearity effect at
+ the position far away from the center of the beam pipe 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Barry301"
@@ -1884,8 +1887,11 @@ key "Barry301"
 \end_inset
 
 .
- It is necessary to correct the equation of diff/sum since we have a slow
- raster.
+ It is necessary to correct the equation of 
+\begin_inset Formula $\Delta/\Sigma$
+\end_inset
+
+ since we have a slow raster.
  With the assumption of an infinitely long chamber and the neglecting the
  antenna influence on the electric field inside the chamber, the signal
  from each antenna excited by the beam can be calculated via image charge
@@ -2069,7 +2075,11 @@ reference "eq:antenna_signal"
 
 \end_inset
 
-), the diff/sum method is used as follows:
+), the 
+\begin_inset Formula $\Delta/\Sigma$
+\end_inset
+
+ method is used as follows:
 \begin_inset Formula 
 \begin{eqnarray}
 D_{U} & = & \frac{\phi_{U+}-\phi_{U-}}{\phi_{U+}+\phi_{U-}},\label{eq:diff/sum}
@@ -2434,7 +2444,11 @@ reference "eq:realxy"
 
 \end_inset
 
-) and the one from the diff/sum equation (
+) and the one from the 
+\begin_inset Formula $\Delta/\Sigma$
+\end_inset
+
+ equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:xb=xy"
@@ -2458,7 +2472,11 @@ reference "eq:realxy"
 
 \end_inset
 
-) can correct the non-linearity effect caused by the diff/sum method.
+) can correct the non-linearity effect caused by the 
+\begin_inset Formula $\Delta/\Sigma$
+\end_inset
+
+ method.
  The handling of the BPM information which only used for the center beam
  position (discussed in chapter 
 \begin_inset CommandInset ref
@@ -2553,8 +2571,11 @@ name "fig:BPM-non-linearity-correction"
 \end_inset
 
 BPM non-linearity correction.
- (a) Relationship between the position calculated from diff/sum equation
- (
+ (a) Relationship between the position calculated from 
+\begin_inset Formula $\Delta/\Sigma$
+\end_inset
+
+ equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:xb=xy"
@@ -2572,7 +2593,11 @@ reference "eq:realxy"
  Red solid line is a reference line came from linear fit for the center
  points .
  Data is collected from experiment.
- (b) Comparison between the diff/sum equation (
+ (b) Comparison between the 
+\begin_inset Formula $\Delta/\Sigma$
+\end_inset
+
+ equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:xb=xy"
@@ -2597,7 +2622,11 @@ reference "eq:realxy"
 \end_inset
 
 ).
- The blue circles are the positions calculated from diff/sum equation (
+ The blue circles are the positions calculated from 
+\begin_inset Formula $\Delta/\Sigma$
+\end_inset
+
+ equation (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:xb=xy"
@@ -3159,7 +3188,10 @@ name "fig:Transporting-beam-position"
 \end_inset
 
 Transporting beam position from BPM to target with transverse target magnet
- field
+ field.
+ Trajectories are from simulation.
+ Blue lines show the z position of BPMA, BPMB and target.
+ y and z are in global Hall coordinate.
 \end_layout
 
 \end_inset
@@ -3301,14 +3333,14 @@ reference "fig:Slow-raster-size"
 placement tbph
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3604,11 +3636,7 @@ Carbon hole method to calibrate raster
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Scattered electrons were used as the trigger for recording the raster magnet
+ Scattered electrons were used as the trigger for recording the raster magnet
  current.
  Since the density of the target frame was much higher than that of the
  
@@ -3810,7 +3838,11 @@ JLab g2p experiment used a transversely polarized
  current (50-100 nA).
  A software filter was used to reduce noise of the BPMs.
  A correction equation was used to compensate the non-linearity caused by
- the diff/sum equation.
+ the 
+\begin_inset Formula $\Delta/\Sigma$
+\end_inset
+
+ equation.
  The harp data and the linear fit between the bpm signal and the beam current
  were used to extract the calibration constant of the BPM.
  To account for the strong target magnetic field effect, transport functions
