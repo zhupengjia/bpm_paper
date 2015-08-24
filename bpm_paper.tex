@@ -119,7 +119,7 @@ g2p; BPM; raster; beam position
 A polarized ammonia ($NH_{3}$) target was used for the first time in Hall A for the g2p experiment \citep{g2pproposal}. It operated at a low temperature of 1K and a strong transverse magnetic field of either 5 T or 2.5 T. A high electron beam current would cause significant target polarization drop due to target temperature rising and ionization radiation to the target material \citep{Crabb67}. To minimize depolarization, the beam current was limited to below 100 nA and a raster system was used to spread the beam spot out to a larger area. The transverse magnetic field in the target region would cause the beam to be deflected downward when the beam enters the target region. To compensate for this, two chicane magnets were placed in front of the target to pre-bend the beam upwards. Due to the low beam current and tight space limitations after the chicane magnets, the experimental accuracy goals for the position (1-2 mm) and angle (1-2 mrad) at the target were challenging to achieve. New beam-line devices and an associated readout electronics system were designed for the g2p experiment to accomplish these goals. Design details and the performance of the beam-line devices will be described in the following sections along with a discussion of a new analysis method determine the beam position and direction. 
 \begin{figure}[tbph]
 \begin{centering}
-\includegraphics[width=1\linewidth]{beamline_lite} 
+\includegraphics[width=1\columnwidth]{beamline_lite} 
 \par\end{centering}
 
 \protect\caption{\label{fig:beamline-for-g2p}Schematic of beamline components for g2p experiment}
@@ -138,11 +138,11 @@ The BPM consists of four open-ended antennas for detecting the beam position; th
 \begin{figure}[tbph]
 \begin{centering}
 \subfloat[BPM design diagram, from JLab instrumentation group]{\protect\begin{centering}
-\protect\includegraphics[width=0.4\linewidth]{bpmdiag}\protect
+\protect\includegraphics[width=0.4\columnwidth]{bpmdiag}\protect
 \par\end{centering}
 
 }$\qquad$\subfloat[BPM chamber which contains 4 antennas]{\protect\begin{centering}
-\protect\includegraphics[width=0.4\linewidth]{bpm}\protect
+\protect\includegraphics[width=0.4\columnwidth]{bpm}\protect
 \par\end{centering}
 
 }
@@ -167,7 +167,7 @@ Because of the space limitation between the second chicane magnet and the target
 Two super harps were designed and installed in the beam-line, as shown in Fig.\ref{fig:beamline-for-g2p} (label 6a - 1H04 and 6b - 1H05A), to provide an absolute measurement of the beam position for calibration of the BPMs. The new harps were able to work in pulsed beam (1\% duty factor) with a current of several $\mu$A. A diagram for the harp is shown in Fig.\ref{fig:harp-diagram},
 \begin{figure}[tbph]
 \begin{centering}
-\includegraphics[width=1\linewidth]{harp_one} 
+\includegraphics[width=1\columnwidth]{harp_one} 
 \par\end{centering}
 
 \protect\caption{\label{fig:harp-diagram}Harp diagram}
@@ -228,15 +228,15 @@ where the $A_{x}$ and $A_{y}$ are the maximum amplitude, $t_{0}$ and $\phi$ are 
 \begin{figure}[tbph]
 \begin{centering}
 \subfloat[\label{fig:AM-phase-=00003D0022600}Raster pattern with $t_{0}$\ensuremath{\neq}0]{\protect\begin{centering}
-\protect\includegraphics[width=0.33\linewidth]{slraster_uniform_real}\protect
+\protect\includegraphics[width=0.33\columnwidth]{slraster_uniform_real}\protect
 \par\end{centering}
 
 }\subfloat[\label{fig:simulated-raster-shape}Simulated raster pattern, with $t_{0}$\ensuremath{\neq}0]{\protect\begin{centering}
-\protect\includegraphics[width=0.33\linewidth]{slraster_uniform_sim}\protect
+\protect\includegraphics[width=0.33\columnwidth]{slraster_uniform_sim}\protect
 \par\end{centering}
 
 }\subfloat[\label{fig:AM-phase=00003D00003D0}Manually adjust $t_{0}$ to 0]{\protect\begin{centering}
-\protect\includegraphics[width=0.33\linewidth]{slraster_uniform}\protect
+\protect\includegraphics[width=0.33\columnwidth]{slraster_uniform}\protect
 \par\end{centering}
 
 }
@@ -258,11 +258,11 @@ An example of a harp scan result is shown in Fig.\ref{fig:1H05A-harp-scan}.
 \begin{figure}[tbph]
 \begin{centering}
 \subfloat[\label{fig:position-vs-index}position vs index for harp scan, used for extending position record]{\protect\begin{centering}
-\protect\includegraphics[width=0.4\linewidth]{harp05_pos_index}\protect
+\protect\includegraphics[width=0.4\columnwidth]{harp05_pos_index}\protect
 \par\end{centering}
 
 }$\qquad$\subfloat[\label{fig:position-vs-signal}Signal vs position for harp, $x$ axis is position, $y$ axis is the strength of signal, which is the ADC value. ]{\protect\begin{centering}
-\protect\includegraphics[width=0.4\linewidth]{harp05_peak}\protect
+\protect\includegraphics[width=0.4\columnwidth]{harp05_peak}\protect
 \par\end{centering}
 
 }
@@ -288,11 +288,11 @@ where $\phi_{i}$ is the signal received in the antenna, and $i$ is $u_{+}$, $u_{
 \begin{figure}[tbph]
 \begin{centering}
 \subfloat[Mirror method]{\protect\begin{centering}
-\protect\includegraphics[width=0.4\linewidth]{mirror_method}\protect
+\protect\includegraphics[width=0.4\columnwidth]{mirror_method}\protect
 \par\end{centering}
 
 }\subfloat[Signal on antenna]{\protect\begin{centering}
-\protect\includegraphics[width=0.4\linewidth]{antenna_signal}\protect
+\protect\includegraphics[width=0.4\columnwidth]{antenna_signal}\protect
 \par\end{centering}
 
 }
@@ -321,29 +321,6 @@ U & = & RD_{U}(\frac{1}{D_{u}^{2}+D_{v}^{2}}-\frac{1}{\sqrt{D_{u}^{2}+D_{v}^{2}}
 \end{eqnarray}
 
 
-To verify this correction equation, a simulation was performed. First, a set of position data were generated (Fig.\ref{fig:Simulated-real-position}(a)), and the designed radius of the BPM chamber was used for $R$. Using equation (\ref{eq:antenna_signal}) to get the signal for each antenna and ignoring $\phi_{0}$ and $I$, equations (\ref{eq:realxy}) and (\ref{eq:litexyb=00003Dxy}) were used to calculate the beam position for comparison. The results are shown in Fig.\ref{fig:Simulated-real-position}(b) and \ref{fig:Simulated-real-position}(c), respectively. 
-\begin{figure}[tbph]
-\begin{centering}
-\subfloat[\label{fig:diff_sum_simulated}]{\protect\begin{centering}
-\protect\includegraphics[width=0.3\linewidth]{diff_sum_simreal}\protect
-\par\end{centering}
-
-}\subfloat[\label{fig:diff_sum_calculated}]{\protect\begin{centering}
-\protect\includegraphics[width=0.3\linewidth]{diff_sum_calculated}\protect
-\par\end{centering}
-
-}\subfloat[\label{fig:diff_sum_correction}]{\protect\begin{centering}
-\protect\includegraphics[width=0.3\linewidth]{diff_sum_correction}\protect
-\par\end{centering}
-
-}
-\par\end{centering}
-
-\protect\caption{\label{fig:Simulated-real-position}Comparing the calculated results using equation (\ref{eq:litexyb=00003Dxy}) and (\ref{eq:realxy}) with simulated position. (a) Simulated position; (b) The calculated result with equation (\ref{eq:litexyb=00003Dxy}), (c) The calculated result with equation (\ref{eq:realxy}).}
-\end{figure}
-
-
-The correction equation is also tested by using the experiment data and the bench test data. Fig.\ref{fig:BPM-non-linearity-correction}(a) shows the comparison between the position calculated from the correction equation (\ref{eq:realxy}) and the one from the $\Delta/\Sigma$ equation (\ref{eq:litexyb=00003Dxy}). Fig.\ref{fig:BPM-non-linearity-correction}(b) shows the comparison with the real beam position from the bench test data. In this way the method using equation (\ref{eq:realxy}) can correct the non-linearity effect caused by the $\Delta/\Sigma$ method. The handling of the BPM information which only used for the center beam position (discussed in chapter \ref{sub:Det-ebe-pos}) also reduced this non-linearity effect. 
 \begin{figure}
 \begin{centering}
 \subfloat[Data from experiment]{\protect\begin{centering}
@@ -359,7 +336,7 @@ The correction equation is also tested by using the experiment data and the benc
 
 \protect\caption{\label{fig:BPM-non-linearity-correction}BPM non-linearity correction. (a) Comparison between the position calculated from $\Delta/\Sigma$ equation (\ref{eq:litexyb=00003Dxy}) (y axis) and the one from correction equation (\ref{eq:realxy}) (x axis). Red solid line is a reference line came from linear fit of the center points. Data is collected from the experiment. (b) Comparison between the $\Delta/\Sigma$ equation (\ref{eq:litexyb=00003Dxy}) and the correction equation (\ref{eq:realxy}) using the bench test data. The x axis is the real beam position. The red triangles are the positions calculated from correction equation (\ref{eq:realxy}). The blue circles are the positions calculated from $\Delta/\Sigma$ equation (\ref{eq:litexyb=00003Dxy}) .}
 \end{figure}
-
+The correction equation is tested by using the experiment data and the bench test data. Fig.\ref{fig:BPM-non-linearity-correction}(a) shows the comparison between the position calculated from the correction equation (\ref{eq:realxy}) and the one from the $\Delta/\Sigma$ equation (\ref{eq:litexyb=00003Dxy}). The red solid line is a reference line came from linear fit of the center points. Fig.\ref{fig:BPM-non-linearity-correction}(b) shows the comparison with the real beam position from the bench test data. In this way the method using equation (\ref{eq:realxy}) can correct the non-linearity effect caused by the $\Delta/\Sigma$ method. The handling of the BPM information which only used for the center beam position (discussed in chapter \ref{sub:Det-ebe-pos}) also reduced this non-linearity effect. 
 
 The final information recorded in the data-stream was designed to have a linear response with the raw signal in the 50-100nA current range. The $\phi_{i}$ in equation (\ref{eq:xb=00003Dxy}) can be rewritten as:
 
@@ -376,7 +353,7 @@ where $h_{U}$ = $a_{U-}/a_{U+}$, which is related to the ratio of the signals fr
 Combining the equations (\ref{eq:phivsA}) and (\ref{eq:antenna_signal}), the calibration constant $b_{i}$ was obtained by taking the linear fit between the ADC values of BPM and the beam current: $I\propto(A_{i}-A_{i\_ped}+b_{i})$. Besides, the linear fit used a group of runs which had the same beam position but different beam current.
 \begin{figure}[tbph]
 \begin{centering}
-\includegraphics[width=0.5\linewidth]{currvspos} 
+\includegraphics[width=0.5\columnwidth]{currvspos} 
 \par\end{centering}
 
 \protect\caption{\label{fig:BPM-raw-signalVScurrent}ADC value of BPM raw signal ($A-A_{ped}$) V.S. current}
@@ -391,7 +368,7 @@ U_{harp}=U_{c}=c_{0}+c_{1}u+c_{2}v,\label{eq:Uvu}
 where $U_{c}$ is the calibrated BPM position. It was converted to Hall coordinate $X_{c}$ for further transporting to the target location. An calibration example is shown in Fig. \ref{fig:Harpscan}. 
 \begin{figure}[tbph]
 \begin{centering}
-\includegraphics[width=0.4\linewidth]{harpscan}
+\includegraphics[width=0.4\columnwidth]{harpscan}
 \par\end{centering}
 
 \protect\caption{\label{fig:Harpscan}Harp scan data combined with BPM data, the asterisks are the positions from harp, while the dots are from BPM. }
@@ -402,7 +379,7 @@ In order to reduce the noise and improve the resolution during data analysis, a 
 \begin{figure}[tbph]
 \begin{centering}
 \subfloat[Normal run with beam]{\protect\begin{centering}
-\protect\includegraphics[width=0.9\columnwidth]{fft_signal}\protect
+\protect\includegraphics[width=0.95\columnwidth]{fft_signal}\protect
 \par\end{centering}
 
 
@@ -412,7 +389,7 @@ In order to reduce the noise and improve the resolution during data analysis, a 
 
 \begin{centering}
 \subfloat[Pedestal run without beam]{\protect\begin{centering}
-\protect\includegraphics[width=0.9\columnwidth]{fft_pedestal}\protect
+\protect\includegraphics[width=0.95\columnwidth]{fft_pedestal}\protect
 \par\end{centering}
 
 
@@ -430,10 +407,10 @@ In order to reduce the noise and improve the resolution during data analysis, a 
 It is easy to transport the position from the BPMs to the target by using a linear transportation method for the straight through setting. For the settings with a transverse magnetic field at the target, the linear transportation method cannot be used since the beam is bent near the target. A target magnet field map \citep{winestosca} was generated from the TOSCA model. To test the accuracy of the TOSCA model, the target magnet field was measured before the experiment \citep{jiefieldmap,chaofieldmap}. The position and angle at target were calculated in terms of the positions at BPMA and BPMB, together with the magnet field information. Fits were used to speed up the calculation. To do this, a full simulation was taken by generating thousands of trajectories with different initial positions and angles. The fits were compared with the full simulation and they are consistent with negligible difference. Fig. \ref{fig:Transporting-beam-position} shows the trajectories from the simulation. 
 \begin{figure}[tbph]
 \begin{centering}
-\includegraphics[width=0.4\linewidth]{rastersize_target1} 
+\includegraphics[width=0.4\columnwidth]{rastersize_target1} 
 \par\end{centering}
 
-\protect\caption{\label{fig:Transporting-beam-position}Transporting beam position from BPM to target with transverse target magnet field. Trajectories are from simulation. Blue lines show the z position of BPMA, BPMB and target. y and z are in global Hall coordinate.}
+\protect\caption{\label{fig:Transporting-beam-position}Transporting beam position from BPM to target with transverse target magnet field. Trajectories are from simulation. Blue lines show the z positions of BPMA, BPMB and target. y and z are in global Hall coordinate.}
 \end{figure}
 
 
@@ -466,15 +443,15 @@ Two methods were used to calibrate the conversion factor for the slow raster. Th
 \begin{figure}[tbph]
 \begin{centering}
 \subfloat[\label{fig:slow-raster-run_different_size}ADC value of slow raster, with the raster current changing]{\protect\begin{centering}
-\protect\includegraphics[width=0.33\linewidth]{raster_size_calib1}\protect
+\protect\includegraphics[width=0.33\columnwidth]{raster_size_calib1}\protect
 \par\end{centering}
 
 }$\quad$\subfloat[\label{fig:slow-raster-oval-fit}Elliptical fit for the spread of magnet current of slow raster]{\protect\begin{centering}
-\protect\includegraphics[width=0.28\linewidth]{slow_raster_oval_fit}\protect
+\protect\includegraphics[width=0.28\columnwidth]{slow_raster_oval_fit}\protect
 \par\end{centering}
 
 }$\quad$\subfloat[\label{fig:slow-raster-size_b}Linear fit between the raster current and the range of beam distribution]{\protect\begin{centering}
-\protect\includegraphics[width=0.3\linewidth]{raster_size_calib2}\protect
+\protect\includegraphics[width=0.3\columnwidth]{raster_size_calib2}\protect
 \par\end{centering}
 
 }
@@ -490,11 +467,11 @@ The second method for calibrating the conversion factor used a target called ``c
 \begin{figure}[tbph]
 \begin{centering}
 \subfloat[Location for carbon hole target in target insert]{\protect\begin{centering}
-\protect\includegraphics[width=0.23\linewidth]{enlarged-Target-insert}\protect
+\protect\includegraphics[width=0.23\columnwidth]{enlarged-Target-insert}\protect
 \par\end{centering}
 
 }$\qquad$\subfloat[The shape of carbon hole in raster ADC, x and y axis are corresponding to the currents on x magnet and y magnet of slow raster, respectively.]{\protect\begin{centering}
-\protect\includegraphics[width=0.58\textwidth]{carbon_hole}\protect
+\protect\includegraphics[width=0.58\columnwidth]{carbon_hole}\protect
 \par\end{centering}
 
 }
