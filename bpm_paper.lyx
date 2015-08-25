@@ -538,7 +538,7 @@ key "Crabb67"
  New beam-line devices and an associated readout electronics system were
  designed for the g2p experiment to accomplish these goals.
  Design details and the performance of the beam-line devices will be described
- in the following sections along with a discussion of a new analysis method
+ in the following sections along with a discussion of an analysis method
  determine the beam position and direction.
  
 \begin_inset Float figure
@@ -816,7 +816,7 @@ s delay time, which was the inverse of the bandwidth setting chosen for
 \end_inset
 
 s delay as a result of finite processing times.
- The BPM cannot provide event by event position because of this time delay,
+ The BPM cannot provide event by event position because of these time delays,
  due to the 25 kHz fast raster system.
 \end_layout
 
@@ -936,7 +936,7 @@ m, a fork and a controller chassis.
 \begin_inset Formula $\backslash$
 \end_inset
 
- wires is 
+ wire is 
 \begin_inset Formula $45^{\circ}$
 \end_inset
 
@@ -1048,9 +1048,8 @@ key "Pierce201454"
 
 \end_inset
 
-.
- The non-uniformity of depolarization could reduce the precision of the
- NMR measurement due to the measurement being an average over the target),
+, and the non-uniformity of depolarization could reduce the precision of
+ the NMR measurement due to the measurement being an average over the target),
  two raster systems were installed at 
 \begin_inset Formula $\sim$
 \end_inset
@@ -1090,7 +1089,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1108,7 +1107,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Current waveform for the fast raster in x or y channel
+Magnet current waveform for the fast raster in x or y channel
 \end_layout
 
 \end_inset
@@ -1251,7 +1250,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1269,7 +1268,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Current waveform for the slow raster
+Magnet current waveform for the slow raster
 \end_layout
 
 \end_inset
@@ -1561,7 +1560,7 @@ None-zero
 
  caused slow raster non-uniformity, (a) and (c) are from the data recorded
  in the ADC, (b) is simulated.
- 
+ The color palette shows the uniformity of the raster pattern.
 \end_layout
 
 \end_inset
@@ -1891,7 +1890,6 @@ key "Barry301"
  With the assumption of an infinitely long chamber and neglecting the antenna
  influence on the electric field inside the chamber, the signal from each
  antenna excited by the beam can be calculated via image charge method (Fig.
- 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:mirror_method"
@@ -2083,13 +2081,9 @@ D_{U} & = & \frac{\phi_{U+}-\phi_{U-}}{\phi_{U+}+\phi_{U-}},\label{eq:diff/sum}
 \end_inset
 
 where 
-\bar under
-
 \begin_inset Formula $U$
 \end_inset
 
-
-\bar default
  denotes 
 \begin_inset Formula $u$
 \end_inset
@@ -2553,7 +2547,7 @@ ADC value of BPM raw signal (
 \end_inset
 
 ) V.S.
- current
+ beam current
 \end_layout
 
 \end_inset
@@ -2658,7 +2652,6 @@ where
 
  for further transporting to the target location.
  An calibration example is shown in Fig.
- 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Harpscan"
@@ -2707,8 +2700,7 @@ Harp scan data combined with BPM data, the asterisks are the positions from
 
 \end_inset
 
- The asterisks in Fig.
- 
+ The asterisks and the dots in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Harpscan"
@@ -2719,11 +2711,11 @@ reference "fig:Harpscan"
 \begin_inset Formula $U_{harp}$
 \end_inset
 
-, and the dots represent 
+ and 
 \begin_inset Formula $U$
 \end_inset
 
-.
+, respectively.
  
 \end_layout
 
@@ -2737,7 +2729,7 @@ In order to reduce the noise and improve the resolution during data analysis,
 placement tbph
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2832,11 +2824,11 @@ name "fig:2Hz-filter-added"
 Software filter applied to BPM signal.
  (a) is the signal with beam, (b) is the pedestal signal without beam.
  (1,2,3) in (a,b) are the raw signal without applying the filter, (4,5,6)
- are applied a 2Hz finite-impulse-response filter with 4th order.
+ are applied a 2 Hz finite-impulse-response filter with 4th order.
  (7,8,9) are averaged with 0.5 s.
  (1,4,7) are the 1-D histogram of the recorded signal, (2,5,8) are the signal
  in time domain, (3,6,9) are in frequency domain.
- Note all of the plots in (a) is for a single signal, same as in (b).
+ Note all of the plots in (a) are from a single signal, same as in (b).
 \end_layout
 
 \end_inset
@@ -2855,7 +2847,6 @@ reference "fig:2Hz-filter-added"
 
  shows the signal dealt with a 2 Hz low pass filter.
  Three plots at the bottom of Fig.
- 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:2Hz-filter-added"
@@ -2910,7 +2901,6 @@ key "jiefieldmap,chaofieldmap"
  The fits were compared with the full simulation and they are consistent
  with negligible difference.
  Fig.
- 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Transporting-beam-position"
@@ -2923,7 +2913,7 @@ reference "fig:Transporting-beam-position"
 placement tbph
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3018,7 +3008,6 @@ where
  The calibration of the conversion factors between the magnet current of
  the rasters and the displaced position will be discussed in the next subsection.
  An example of reconstructed beam position is shown in Fig.
- 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Reconstructed-beam-position"
